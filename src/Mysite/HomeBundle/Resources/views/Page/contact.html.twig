@@ -8,15 +8,15 @@
         <h1>Contact symblog</h1>
     </header>
     
-    {% for flashMessage in app.session.flashbag.get('mysite-notice') %}
-		<div class="mysite-notice">
+    {% for flashMessage in app.session.flashbag.get('blogger-notice') %}
+		<div class="blogger-notice">
 		{{ flashMessage }}
 		</div> 
 	{% endfor %}
 
     <p>Want to contact symblog?</p>
 
-    <form action="{{ path('MysiteHomeBundle_contact') }}" method="post" {{ form_enctype(form) }} class="mysite">
+    <form action="{{ path('MysiteHomeBundle_contact') }}" method="post" {{ form_enctype(form) }} class="blogger">
         {{ form_errors(form) }}
 
         {{ form_row(form.name) }}

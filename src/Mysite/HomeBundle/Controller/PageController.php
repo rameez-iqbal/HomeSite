@@ -47,7 +47,7 @@ class PageController extends Controller
 					->setBody($this->renderView('MysiteHomeBundle:Page:contactEmail.txt.twig', array('enquiry' => $enquiry)));
 				$this->get('mailer')->send($message);
 
-				$this->get('session')->getFlashBag()->add('mysite-notice', 'Your contact enquiry was successfully sent. Thank you!');
+				$this->get('session')->getFlashBag()->add('blogger-notice', 'Your contact enquiry was successfully sent. Thank you!');
 
 				// Redirect - This is important to prevent users re-posting
 				// the form if they refresh the page
@@ -72,7 +72,7 @@ class PageController extends Controller
 						 ->getTagWeights($tags);
 
 		$commentLimit   = $this->container
-                             ->getParameter('mysite_blog.comments.latest_comment_limit');
+                             ->getParameter('blogger_blog.comments.latest_comment_limit');
 		$latestComments = $em->getRepository('MysiteHomeBundle:Comment')
 							 ->getLatestComments($commentLimit);
 

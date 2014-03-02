@@ -1,0 +1,32 @@
+# src/Mysite/HomeBundle/Resources/config/routing.yml
+MysiteHomeBundle_homepage:
+    pattern:  /
+    defaults: { _controller: MysiteHomeBundle:Page:index }
+    requirements:
+        _method:  GET
+        
+MysiteHomeBundle_about:
+    pattern:  /about
+    defaults: { _controller: MysiteHomeBundle:Page:about }
+    requirements:
+        _method:  GET
+        
+MysiteHomeBundle_contact:
+    pattern:  /contact
+    defaults: { _controller: MysiteHomeBundle:Page:contact }
+    requirements:
+        _method:  GET|POST
+        
+MysiteHomeBundle_blog_show:
+    pattern:  /{id}/{slug}
+    defaults: { _controller: MysiteHomeBundle:Blog:show }
+    requirements:
+        _method:  GET
+        id: \d+
+
+MysiteHomeBundle_comment_create:
+    pattern:  /comment/{blog_id}
+    defaults: { _controller: MysiteHomeBundle:Comment:create }
+    requirements:
+        _method:  POST
+        blog_id: \d+

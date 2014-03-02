@@ -1,0 +1,4 @@
+mysite_blog:
+    resource: "@MysiteHomeBundle/Resources/config/routing.yml"
+    prefix:   /
+

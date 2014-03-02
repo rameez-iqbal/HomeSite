@@ -1,0 +1,18 @@
+{# src/Mysite/HomeBundle/Resources/views/layout2.html.twig #}
+{% extends 'MysiteHomeBundle::base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent () }}
+
+    {% stylesheets
+        '@MysiteHomeBundle/Resources/public/css/*'
+         output='css/mysite.css'
+         filter='?yui_css'
+    %}
+        <link href="{{ asset_url }}" rel="stylesheet" media="screen" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block sidebar %}
+    {% render controller("MysiteHomeBundle:Page:sidebar") %}
+{% endblock %}

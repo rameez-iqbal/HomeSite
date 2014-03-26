@@ -35,8 +35,23 @@
                 </div>
 
                 <hgroup>
-					<h2>{% block blog_title %}<a href="{{ path('MysiteHomeBundle_homepage') }}">Rameez Iqbal</a>{% endblock %}</h2>
-					<h3>{% block blog_tagline %}<a href="{{ path('MysiteHomeBundle_homepage') }}">My Portfolio Site</a>{% endblock %}</h3>
+				<div class="full_header">
+					<div class="left_header">
+						<h2>{% block blog_title %}<a href="{{ path('MysiteHomeBundle_homepage') }}">Rameez Iqbal</a>{% endblock %}</h2>
+						<h3>{% block blog_tagline %}<a href="{{ path('MysiteHomeBundle_homepage') }}">My Portfolio Site</a>{% endblock %}</h3>
+					</div>
+					<div class="right_header">
+							<a id="first_link" href="http://www.flickr.com/photos/zurbinc/3976675625/" title="Duckies">
+								<img class="header_image first_img" src="{{ asset('bundles/mysitehome/images/drunk.jpg') }}" />
+							</a>
+							<a id="second_link" href="http://www.flickr.com/photos/zurbinc/3976675625/" title="Duckies">
+								<img class="header_image second_img" src="https://scontent-a.xx.fbcdn.net/hphotos-frc3/t1.0-9/1208644_10151872966581335_1879943218_n.jpg" />
+							</a>
+							<a id="third_link" href="http://www.flickr.com/photos/zurbinc/3976675625/" title="Duckies">
+								<img class="header_image third_img" src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-ash3/t1.0-9/532686_10151585139516335_2059385711_n.jpg" />
+							</a>
+					</div>
+				</div>
 				</hgroup>
             </header>
 
